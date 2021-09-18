@@ -9,5 +9,5 @@
 	- [Cargo](cargo.md)
 
 - [Crates](crates/crates.md)
-	- [rand](rand.md)
-	- [regex](regex.md)
+	- [rand](crates/rand.md)
+	- [regex](./crates/regex.md)

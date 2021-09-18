@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/Rust/crates/regex.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1631957756412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1631957756412,
+            "name": "Commit-0",
+            "content": "## Regex\n### Cargo.toml\n```toml\n[dependencies]\nregex = \"0.1.41\"\n```\n\n### match_all\n```rs\nlet re = regex::Regex::new(r\"test|regex\")\n\t.expect(\"Regex problem\");\nprintln!(\"Did test match? {}\", re.is_match(\"test\"))\n```"
+        }
+    ]
+}
