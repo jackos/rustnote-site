@@ -1,4 +1,4 @@
-[CI](CI.md)
+[CI](ci.md)
 
 ## Package Layout
 
@@ -47,6 +47,12 @@ cargo test
 Run through a single test case
 ```bash
 cargo test foo
+```
+
+### doc
+Create documentation and serve locally
+```bash
+cargo doc --open
 ```
 
 ### run

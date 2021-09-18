@@ -3,7 +3,9 @@
 
 - [Basics](basics/intro.md)
 	- [Errors](basics/errors.md)
+	- [Variables](basics/variables.md)
 	- [Types](basics/types.md)
+	- [Misc.](basics/misc.md)
 
 - [Toolchain](toolchain/toolchain.md)
 	- [Cargo](toolchain/cargo.md)
