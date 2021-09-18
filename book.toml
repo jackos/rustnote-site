@@ -1,0 +1,6 @@
+[book]
+authors = ["Jack Clayton"]
+language = "en"
+multilingual = false
+src = "./src/Rust/"
+title = "Rust Note"
