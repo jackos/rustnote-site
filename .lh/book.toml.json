@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1631952669686,
@@ -40,6 +40,10 @@
                 {
                     "date": 1631957208225,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n [book]\n authors = [\"Jack Clayton\"]\n language = \"en\"\n multilingual = false\n-src = \"/home/jacko/vimwiki/Rust/\"\n+src = \"./src/Rust/\"\n title = \"Rust Note\"\n"
+                },
+                {
+                    "date": 1631958672288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n [book]\n authors = [\"Jack Clayton\"]\n language = \"en\"\n multilingual = false\n-src = \"./src/Rust/\"\n+src = \"./src\"\n title = \"Rust Note\"\n"
                 }
             ],
             "date": 1631952669686,

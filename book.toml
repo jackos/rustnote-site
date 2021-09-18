@@ -2,5 +2,5 @@
 authors = ["Jack Clayton"]
 language = "en"
 multilingual = false
-src = "./src/Rust/"
+src = "./src"
 title = "Rust Note"

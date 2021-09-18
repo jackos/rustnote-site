@@ -2,11 +2,11 @@
 [Rust Note](rustnote.md)
 
 - [Basics](basics/intro.md)
-	- [ErrorHandling](basics/errors.md)
+	- [Errors](basics/errors.md)
 	- [Types](basics/types.md)
 
 - [Toolchain](toolchain/toolchain.md)
-	- [Cargo](cargo.md)
+	- [Cargo](toolchain/cargo.md)
 
 - [Crates](crates/crates.md)
 	- [rand](crates/rand.md)

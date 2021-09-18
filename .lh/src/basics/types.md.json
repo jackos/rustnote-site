@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/basics/types.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1631958733649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1631958764793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n ## Types\n-Convert string input to int\n+### Convert string input to int\n ```rust\n let mut input = String::new();\n std::io::stdin()\n     .read_line(&mut input)\n@@ -10,9 +10,9 @@\n let multiplied = trimmed.parse::<u32>().unwrap() * 10;\n println!(\"Result: {}{}\", input, multiplied)\n ```\n \n-convert with error checking\n+### Convert with error checking\n ```rust\n let trimmed = input.trim();\n let mut apples: u32 = 0;\n match trimmed.parse::<u32>() {\n"
+                },
+                {
+                    "date": 1631958776732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,15 +21,4 @@\n };\n \n println!(\"You input: {} and you have {} apples\", input, apples)\n ```\n-\n-Test mdbook\n-```rust\n-fn main() {\n-    println!(\"Wow the number is: {}\", cool(50))\n-}\n-\n-fn cool(x: i32) -> i32 {\n-    return x * 200;\n-}\n-```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1631958795518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,14 @@\n ```\n \n ### Convert with error checking\n ```rust\n+let input: i32 = 10\n let trimmed = input.trim();\n let mut apples: u32 = 0;\n match trimmed.parse::<u32>() {\n     Ok(i) => apples = i * 10,\n     Err(..) => println!(\"this was not an integer: {}\", trimmed),\n };\n \n println!(\"You input: {} and you have {} apples\", input, apples)\n-```\n+```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1631958804969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n ```\n \n ### Convert with error checking\n ```rust\n-let input: i32 = 10\n+let input: i32 = \"10\"\n let trimmed = input.trim();\n let mut apples: u32 = 0;\n match trimmed.parse::<u32>() {\n     Ok(i) => apples = i * 10,\n"
+                },
+                {
+                    "date": 1631958814226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n ```\n \n ### Convert with error checking\n ```rust\n-let input: i32 = \"10\"\n+let input: i32 = \"10\";\n let trimmed = input.trim();\n let mut apples: u32 = 0;\n match trimmed.parse::<u32>() {\n     Ok(i) => apples = i * 10,\n"
+                },
+                {
+                    "date": 1631958838969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n ```\n \n ### Convert with error checking\n ```rust\n-let input: i32 = \"10\";\n+let input = \"10\";\n let trimmed = input.trim();\n let mut apples: u32 = 0;\n match trimmed.parse::<u32>() {\n     Ok(i) => apples = i * 10,\n"
+                },
+                {
+                    "date": 1631958874970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,14 @@\n ```\n \n ### Convert with error checking\n ```rust\n-let input = \"10\";\n+let input = \"20\";\n let trimmed = input.trim();\n let mut apples: u32 = 0;\n match trimmed.parse::<u32>() {\n     Ok(i) => apples = i * 10,\n     Err(..) => println!(\"this was not an integer: {}\", trimmed),\n };\n \n-println!(\"You input: {} and you have {} apples\", input, apples)\n+println!(\"You input: {} * 10 = {} apples\", input, apples)\n ```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1631958893259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n     Ok(i) => apples = i * 10,\n     Err(..) => println!(\"this was not an integer: {}\", trimmed),\n };\n \n-println!(\"You input: {} * 10 = {} apples\", input, apples)\n+println!(\"Result: {} * 10 = {} apples\", input, apples)\n ```\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1631958733649,
+            "name": "Commit-0",
+            "content": "## Types\nConvert string input to int\n```rust\nlet mut input = String::new();\nstd::io::stdin()\n    .read_line(&mut input)\n    .expect(\"Failed to read line\");\n\nlet trimmed = input.trim();\nlet multiplied = trimmed.parse::<u32>().unwrap() * 10;\nprintln!(\"Result: {}{}\", input, multiplied)\n```\n\nconvert with error checking\n```rust\nlet trimmed = input.trim();\nlet mut apples: u32 = 0;\nmatch trimmed.parse::<u32>() {\n    Ok(i) => apples = i * 10,\n    Err(..) => println!(\"this was not an integer: {}\", trimmed),\n};\n\nprintln!(\"You input: {} and you have {} apples\", input, apples)\n```\n\nTest mdbook\n```rust\nfn main() {\n    println!(\"Wow the number is: {}\", cool(50))\n}\n\nfn cool(x: i32) -> i32 {\n    return x * 200;\n}\n```"
+        }
+    ]
+}
