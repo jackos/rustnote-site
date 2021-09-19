@@ -1,4 +1,4 @@
-[CI](ci.md)
+[CI](./ci.md)
 
 ## Package Layout
 
