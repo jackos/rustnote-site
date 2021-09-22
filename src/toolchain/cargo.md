@@ -109,3 +109,10 @@ registry/index/
 registry/cache/
 git/db/
 ```
+
+### Make smaller binary
+```toml
+// This will stop cleanup when the program panics, leaving it to the OS
+[profile.release]
+panic = 'abort'
+```

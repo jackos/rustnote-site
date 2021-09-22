@@ -14,7 +14,7 @@ let x = "I'm on the stack!";
 Immutable fixed size, written directly into the exe
 
 ## Heap
-Unkown size at compile time, can grow and shrink at runtime.
+Unknown size at compile time, can grow and shrink at runtime.
 
 Memory allocator finds empty spot that's big enough, marks it as being in use, and returns a pointer. This is called allocating.
 
@@ -29,14 +29,14 @@ Mutable can change at runtime so goes onto the heap
 let s1 = String::from("hello");
 ```
 
-### Heap
+### Stack
 |   name   |  value  |
 |:--------:|:-------:|
 | ptr      | address |
 | len      | 5       |
 | capacity | 5       |
 
-### Stack
+### Heap
 | index | value |
 |-------|-------|
 | 0     | h     |

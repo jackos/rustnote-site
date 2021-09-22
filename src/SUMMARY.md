@@ -7,6 +7,7 @@
 	- [Misc.](basics/misc.md)
 	- [Functions](basics/functions.md)
 	- [Loops](basics/loops.md)
+	- [Modules](basics/modules.md)
 
 - [Types](types/types.md)
 	- [Scalar](types/scalar.md)
@@ -16,15 +17,25 @@
 	- [Array](types/array.md)
 	- [Tuple](types/tuple.md)
 	- [Conversion](types/conversions.md)
+	- [Vector](types/vectors.md)
 
 - [Ownership](owenership/ownership.md)
 	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
 
-- [Toolchain](toolchain/toolchain.md)
+- [Build Tools](toolchain/toolchain.md)
+	- [Debug](toolchain/debug.md)
 	- [Cargo](toolchain/cargo.md)
 		- [CI](toolchain/ci.md)
 
 - [Crates](crates/crates.md)
 	- [rand](crates/rand.md)
-	- [regex](./crates/regex.md)
+	- [regex](crates/regex.md)
+- [std](std.md)
+	- [collections](std/collections/collections.md)
+		- [HashMap](std/collections/hashmap.md)
+		- [vec](std/collections/vec.md)
+	- [fs](std/fs.md)
+	- [io](std/io.md)
+
+- [Useful Links](links.md)

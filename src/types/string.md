@@ -49,3 +49,23 @@ let slice = &a[1..3];
 
 println!("{:?}", slice)
 ```
+## Build a string with format!
+```rust
+let s1 = String::from("tic");
+let s2 = String::from("tac");
+let s3 = String::from("toe");
+
+let word = format!("{}-{}-{}", s1, s2, s3);
+```
+## Loop over string
+```rust
+let hello = "नमस्ते";
+// Characters
+for c in hello.chars() {
+	println!("{}", c);
+}
+// Bytes
+for b in hello.bytes() {
+	println!("{}", b);
+}
+```
