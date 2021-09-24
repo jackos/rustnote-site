@@ -2,12 +2,12 @@
 [Rust Note](rustnote.md)
 
 - [Basics](basics/intro.md)
-	- [Errors](basics/errors.md)
 	- [Variables](basics/variables.md)
 	- [Misc.](basics/misc.md)
 	- [Functions](basics/functions.md)
 	- [Loops](basics/loops.md)
 	- [Modules](basics/modules.md)
+	- [Errors](basics/errors.md)
 
 - [Types](types/types.md)
 	- [Scalar](types/scalar.md)
@@ -18,6 +18,10 @@
 	- [Tuple](types/tuple.md)
 	- [Conversion](types/conversions.md)
 	- [Vector](types/vectors.md)
+
+- [Generics](generics.md)
+- [Traits](trait.md)
+- [Lifetimes](lifetimes.md)
 
 - [Ownership](owenership/ownership.md)
 	- [Stack and Heap](ownership/stack_heap.md)

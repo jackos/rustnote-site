@@ -84,3 +84,32 @@ impl Rectangle {
 
 let square = Rectangle::square(5);
 ```
+
+## Getter / Setter
+This is an example of how you could implement OOP style getters and setters with checks.
+```rust
+#[derive(Debug)]
+pub struct Guess {
+    value: i32,
+}
+
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be between 1 and 100, got {}.", value);
+        }
+
+        Guess { value }
+    }
+
+    pub fn value(&self) -> i32 {
+        self.value
+    }
+}
+
+fn main() {
+    let guess = Guess::new(10);
+
+    println!("{:?}", guess.value())
+}
+```
