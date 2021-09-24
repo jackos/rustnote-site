@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/SUMMARY.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1632523799449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1632523868387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \t- [Conversion](types/conversions.md)\n \t- [Vector](types/vectors.md)\n \n - [Generics](generics/generics.md)\n-- [Traits](trait.md)\n+- [Traits](generics/trait.md)\n - [Lifetimes](lifetimes.md)\n \n - [Ownership](owenership/ownership.md)\n \t- [Stack and Heap](ownership/stack_heap.md)\n"
+                },
+                {
+                    "date": 1632523873532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \t- [Vector](types/vectors.md)\n \n - [Generics](generics/generics.md)\n - [Traits](generics/trait.md)\n-- [Lifetimes](lifetimes.md)\n+- [Lifetimes](generics/lifetimes.md)\n \n - [Ownership](owenership/ownership.md)\n \t- [Stack and Heap](ownership/stack_heap.md)\n \t- [General](ownership/general.md)\n"
+                },
+                {
+                    "date": 1632523880984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \t- [Tuple](types/tuple.md)\n \t- [Conversion](types/conversions.md)\n \t- [Vector](types/vectors.md)\n \n-- [Generics](generics/generics.md)\n+- [Generics](generics/types.md)\n - [Traits](generics/trait.md)\n - [Lifetimes](generics/lifetimes.md)\n \n - [Ownership](owenership/ownership.md)\n"
+                },
+                {
+                    "date": 1632523947655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,13 @@\n \t- [Array](types/array.md)\n \t- [Tuple](types/tuple.md)\n \t- [Conversion](types/conversions.md)\n \t- [Vector](types/vectors.md)\n+- [Generics](generics/generics.md)\n+\t- [Generics](generics/types.md)\n+\t- [Traits](generics/traits.md)\n+\t- [Lifetimes](generics/lifetimes.md)\n \n-- [Generics](generics/types.md)\n-- [Traits](generics/trait.md)\n-- [Lifetimes](generics/lifetimes.md)\n-\n - [Ownership](owenership/ownership.md)\n \t- [Stack and Heap](ownership/stack_heap.md)\n \t- [General](ownership/general.md)\n \n"
+                },
+                {
+                    "date": 1632523993227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,11 @@\n \t- [Array](types/array.md)\n \t- [Tuple](types/tuple.md)\n \t- [Conversion](types/conversions.md)\n \t- [Vector](types/vectors.md)\n+\n - [Generics](generics/generics.md)\n-\t- [Generics](generics/types.md)\n+\t- [Types](generics/types.md)\n \t- [Traits](generics/traits.md)\n \t- [Lifetimes](generics/lifetimes.md)\n \n - [Ownership](owenership/ownership.md)\n"
+                }
+            ],
+            "date": 1632523799449,
+            "name": "Commit-0",
+            "content": "# Summary\n[Rust Note](rustnote.md)\n\n- [Basics](basics/intro.md)\n\t- [Variables](basics/variables.md)\n\t- [Misc.](basics/misc.md)\n\t- [Functions](basics/functions.md)\n\t- [Loops](basics/loops.md)\n\t- [Modules](basics/modules.md)\n\t- [Errors](basics/errors.md)\n\n- [Types](types/types.md)\n\t- [Scalar](types/scalar.md)\n\t- [String](types/string.md)\n\t- [Struct](types/struct.md)\n\t- [Enum](types/enums.md)\n\t- [Array](types/array.md)\n\t- [Tuple](types/tuple.md)\n\t- [Conversion](types/conversions.md)\n\t- [Vector](types/vectors.md)\n\n- [Generics](generics/generics.md)\n- [Traits](trait.md)\n- [Lifetimes](lifetimes.md)\n\n- [Ownership](owenership/ownership.md)\n\t- [Stack and Heap](ownership/stack_heap.md)\n\t- [General](ownership/general.md)\n\n- [Build Tools](toolchain/toolchain.md)\n\t- [Debug](toolchain/debug.md)\n\t- [Cargo](toolchain/cargo.md)\n\t\t- [CI](toolchain/ci.md)\n\n- [Crates](crates/crates.md)\n\t- [rand](crates/rand.md)\n\t- [regex](crates/regex.md)\n- [std](std.md)\n\t- [collections](std/collections/collections.md)\n\t\t- [HashMap](std/collections/hashmap.md)\n\t\t- [vec](std/collections/vec.md)\n\t- [fs](std/fs.md)\n\t- [io](std/io.md)\n\n- [Useful Links](links.md)"
+        }
+    ]
+}

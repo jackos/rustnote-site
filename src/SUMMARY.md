@@ -19,9 +19,10 @@
 	- [Conversion](types/conversions.md)
 	- [Vector](types/vectors.md)
 
-- [Generics](generics.md)
-- [Traits](trait.md)
-- [Lifetimes](lifetimes.md)
+- [Generics](generics/generics.md)
+	- [Types](generics/types.md)
+	- [Traits](generics/traits.md)
+	- [Lifetimes](generics/lifetimes.md)
 
 - [Ownership](owenership/ownership.md)
 	- [Stack and Heap](ownership/stack_heap.md)
