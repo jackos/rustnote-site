@@ -3,7 +3,6 @@
 
 - [Basics](basics/intro.md)
 	- [Variables](basics/variables.md)
-	- [Misc.](basics/misc.md)
 	- [Functions](basics/functions.md)
 	- [Loops](basics/loops.md)
 	- [Modules](basics/modules.md)
@@ -28,7 +27,8 @@
 	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
 
-- [Build Tools](toolchain/toolchain.md)
+- [Toolchain](toolchain/toolchain.md)
+	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)
 	- [Cargo](toolchain/cargo.md)
 		- [CI](toolchain/ci.md)
@@ -43,4 +43,5 @@
 	- [fs](std/fs.md)
 	- [io](std/io.md)
 
+- [Attributes](attributes.md)
 - [Useful Links](links.md)
