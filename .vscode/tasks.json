@@ -4,9 +4,33 @@
     {
       "type": "cargo",
       "command": "run",
-      "problemMatcher": ["$rustc"],
-      "label": "rust",
-      "options": {"cwd": "scratch"} 
+      "problemMatcher": [
+        "$rustc"
+      ],
+      "label": "rusta",
+      "options": {
+        "cwd": "scratch"
+      }
+    },
+    {
+      "type": "shell",
+      "command": "${fileDirname} cargo test",
+      "options": {
+        "cwd": "scratch",
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": [
+        "$rustc"
+      ],
+      "group": "test",
+      "label": "rust"
     }
   ]
 }

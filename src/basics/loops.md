@@ -22,22 +22,21 @@ Print all the items in the array
 ```rust
 let a = [10, 20, 30, 40, 50];
 for e in a.iter() {
-		println!("The value is: {}", e)
+		println!("The value is: {}", e);
 }
 ```
 ## For .len()
 Print just the iterator
 ```rust
-    let x = [1, 5, 10, 20];
+let x = [1, 5, 10, 20];
 
-    for i in 0..x.len() {
-        println!("{}", i);
-    }
+for i in 0..x.len() {
+    println!("{}", i);
 }
 ```
 
 ## For iter enumerate over string as bytes
-Get the iterator and the items
+This example searches for a `b' '` denoting a space to return to first word
 ```rust
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
@@ -71,8 +70,8 @@ let x = loop {
 println!("{}", x);
 ```
 
-If the semicolon is removed from the end of the loop, we can return the result from the loop expression.
 ## Break return
+If the semicolon is removed from the end of the loop, we can return the result from the loop expression.
 ```rust 
 fn looper() -> i32 {
     let mut counter = 0;
