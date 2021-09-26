@@ -1,5 +1,5 @@
 # Summary
-[Rust Note](rustnote.md)
+[Rustnote](rustnote.md)
 
 - [Basics]()
 	- [Variables](basics/variables.md)

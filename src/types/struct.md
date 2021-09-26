@@ -88,7 +88,7 @@ let square = Rectangle::square(5);
 
 ## Getter / Setter
 This is an example of how you could implement OOP style getters and setters with checks.
-```rust
+```rust,editable
 #[derive(Debug)]
 pub struct Guess {
     value: i32,
