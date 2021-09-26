@@ -1,14 +1,14 @@
 # Summary
 [Rust Note](rustnote.md)
 
-- [Basics](basics/intro.md)
+- [Basics]()
 	- [Variables](basics/variables.md)
 	- [Functions](basics/functions.md)
 	- [Loops](basics/loops.md)
 	- [Modules](basics/modules.md)
 	- [Errors](basics/errors.md)
 
-- [Types](types/types.md)
+- [Types]()
 	- [Scalar](types/scalar.md)
 	- [String](types/string.md)
 	- [Struct](types/struct.md)
@@ -18,30 +18,30 @@
 	- [Conversion](types/conversions.md)
 	- [Vector](types/vectors.md)
 
-- [Generics](generics/generics.md)
+- [Generics]()
 	- [Types](generics/types.md)
 	- [Traits](generics/traits.md)
 	- [Lifetimes](generics/lifetimes.md)
 
-- [Ownership](owenership/ownership.md)
+- [Ownership]()
 	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
 
-- [Toolchain](toolchain/toolchain.md)
+- [Toolchain]()
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)
 	- [Cargo](toolchain/cargo.md)
 		- [CI](toolchain/ci.md)
 
-- [Crates](crates/crates.md)
+- [Crates]()
 	- [rand](crates/rand.md)
 	- [regex](crates/regex.md)
-- [std](std.md)
-	- [collections](std/collections/collections.md)
+
+- [std]()
+	- [collections]()
 		- [HashMap](std/collections/hashmap.md)
-		- [vec](std/collections/vec.md)
-	- [fs](std/fs.md)
-	- [io](std/io.md)
 
 - [Attributes](attributes.md)
 - [Useful Links](links.md)
+
+- [Bevy](bevy/misc.md)

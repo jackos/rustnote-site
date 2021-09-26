@@ -5,7 +5,7 @@
 let v: Vec<i32> = Vec::new();
 ```
 ### Infer with first type pushed in
-```rust
+```rust,editable
 let mut v = Vec::new();
 v.push(1);
 ```

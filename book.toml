@@ -1,6 +1,13 @@
 [book]
-authors = ["Jack Clayton"]
 language = "en"
+authors = ["Jack Clayton"]
+description = "Personal notes as I learn Rust from multiple sources"
 multilingual = false
 src = "./src"
 title = "Rust Note"
+
+[build]
+create-missing = false
+
+[output.html.playground]
+editable = true
