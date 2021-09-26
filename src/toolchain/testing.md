@@ -89,3 +89,29 @@ mod tests {
     }
 }
 ```
+## Integration Test
+Any files in `./tests` will be run as intergration test, they must import modules to be used:
+```rust
+use adder;
+
+#[test]
+fn it_adds_two() {
+    assert_eq!(4, adder::add_two(2));
+}
+```
+To avoid tests being run e.g. for helper functions, put them in sub directories e.g. `tests/common mod.rs`
+
+Then you can call them from as a module:
+```rust
+use adder;
+
+mod common;
+
+#[test]
+fn it_adds_two() {
+    common::setup();
+    assert_eq!(4, adder::add_two(2));
+}
+```
+
+Anything in `src/main.rs` can't be tested, good idea to leave hardly any code in there for this reason.

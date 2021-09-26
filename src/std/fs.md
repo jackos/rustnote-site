@@ -20,6 +20,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
     }
 }
 ```
+## Shorter version
 ```rust
 use std::io;
 use std::io::Read;
@@ -31,4 +32,10 @@ fn read_username_from_file() -> Result<String, io::Error> {
     f.read_to_string(&mut s)?;
     Ok(s)
 }
+```
+## Even short version
+```rust
+use std::fs;
+let contents = fs::read_to_string(filename)
+    .expect("Something went wrong reading the file");
 ```

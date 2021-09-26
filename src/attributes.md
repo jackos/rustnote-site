@@ -19,9 +19,9 @@ Determines the order when comparing complex data types with `>` `>=` `<` `<=`.Th
 Determines when 
 
 ## cfg
-Mark a function as a test so it doesn't produce warnings about unused `use` directives. 
+### test
+Mark a function as a test so it doesn't get included when compiling `cargo build` or `cargo run`
 
-TODO: Probably does more not sure yet.
 #[cfg(test)]
 ```rust
 mod tests {
