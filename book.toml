@@ -14,7 +14,7 @@ preferred-dark-theme = "palenight"
 # copy-fonts = true
 # google-analytics = "UA-123456-7"
 # additional-css = ["custom.css", "custom2.css"]
-additional-js = ["monaco.js"]
+# additional-js = ["monaco.js"]
 # no-section-label = false
 # git-repository-url = "https://github.com/rustnote/site"
 # git-repository-icon = "fa-github"
@@ -31,7 +31,7 @@ additional-js = ["monaco.js"]
 # level = 0
 
 [output.html.playground]
-editor = "./monaco.js"
+# editor = "./monaco.js"
 editable = true
 # copy-js = true
 # line-numbers = false
