@@ -37,13 +37,22 @@
 - [Crates]()
 	- [rand](crates/rand.md)
 	- [regex](crates/regex.md)
+	- [Bevy](bevy/misc.md)
+	- [xtask](crates/xtask.md)
+
+- [godot](godot/compile.md)
 
 - [std]()
 	- [env](std/collections/env.md)
 	- [collections]()
 		- [HashMap](std/collections/hashmap.md)
 
-- [Attributes](attributes.md)
-- [Useful Links](links.md)
+- [General]()
+	- [Terms](gerneral/terms.md)
+	- [Attributes](general/attributes.md)
+	- [Useful Links](general/links.md)
+	- [Project Structure](general/structure.md)
 
-- [Bevy](bevy/misc.md)
+- [Algos]()
+	- [Two Sum](algo/twosum.md)
+	- [Longest Substring](algo/longest_substring.md)
