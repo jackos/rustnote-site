@@ -13,5 +13,3 @@ fn main() {
 	println!("Edited value: {}", x);
 }
 ```
-
-_Note: it uses https://play.rust-lang.org/ for running the code, I'm working on a REPL that pre-compiles common crates, executes Rust code for literate programming, and allows for code completion._

@@ -1,3 +1,4 @@
+```rust
 pub fn length_of_longest_substring(s: String) -> i32 {
     let mut map = std::collections::HashMap::new();
     let mut start = 0;
@@ -19,3 +20,4 @@ fn main() {
     let result = length_of_longest_substring(String::from("abcabcasbb"));
     println!("{}", result)
 }
+```

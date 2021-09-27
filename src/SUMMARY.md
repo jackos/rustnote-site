@@ -29,7 +29,6 @@
 
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
-		- [Cargo Test](toolchain/cargo_test.md)
 	- [Debug](toolchain/debug.md)
 	- [Cargo](toolchain/cargo.md)
 		- [CI](toolchain/ci.md)
@@ -43,7 +42,6 @@
 - [godot](godot/compile.md)
 
 - [std]()
-	- [env](std/collections/env.md)
 	- [collections]()
 		- [HashMap](std/collections/hashmap.md)
 
