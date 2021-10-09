@@ -69,3 +69,13 @@ for b in hello.bytes() {
 	println!("{}", b);
 }
 ```
+
+## Multiline literals
+Escape first newline with `\`
+```rust
+let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+println!("{}", contents)
+```

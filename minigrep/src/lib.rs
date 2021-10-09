@@ -3,7 +3,7 @@ use std::error::Error;
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.filename)?;
-    println!("With:\n{}", contents);
+    println!("With text:\n{}",contents);
     Ok(())
 }
 
@@ -18,5 +18,20 @@ impl Config {
             return Err("Not enough arguments")
         }
         Ok(Config{query: args[1].clone(), filename: args[2].clone()})
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn on_result() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+println!("{}", contents);
     }
 }
