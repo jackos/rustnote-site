@@ -8,6 +8,38 @@ let add_one_v3 = |x|             { x + 1 };
 let add_one_v4 = |x|               x + 1  ;
 ```
 
+### Capturing value from environment
+This is an example where the value from the surrounding environment is used in the closure.
+```rust
+fn main() {
+    let x = 4;
+
+    let equal_to_x = |z| x == z;
+
+    let y = 4;
+    println!("result: {}", equal_to_x(y));
+}
+```
+
+### Closure Traits
+These are inferred from closure usage
+- `FnOnce` takes ownership of variable from surrounding environment, means the closure can't be called more than once
+- `FnMut` borrows mutably
+- `Fn` borrows immutably 
+
+### move
+Use the `move` keyword to ensure we transfer ownership to the closure, if it's a scalar value it will create a new value
+```rust
+fn main() {
+    let x = 4;
+
+    let equal_to_x = move |z| x == z;
+
+    let y = 4;
+    println!("result: {}", equal_to_x(y));
+}
+```
+
 ### Closure use example
 Create a cache to hold the result from a closure in a map
 

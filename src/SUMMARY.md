@@ -25,6 +25,7 @@
 
 - [Functional]()
 	- [Closures](functional/closures.md)
+	- [Iterators](functional/iterators.md)
 
 - [Ownership]()
 	- [Stack and Heap](ownership/stack_heap.md)

@@ -7,8 +7,56 @@
 		{
 			"type": "lldb",
 			"request": "launch",
-			"name": "Debug",
-			"program": "${workspaceFolder}/main.rs",
+			"name": "Debug unit tests in library 'minigrep'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=minigrep"
+				],
+				"filter": {
+					"name": "minigrep",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'minigrep'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=minigrep",
+					"--package=minigrep"
+				],
+				"filter": {
+					"name": "minigrep",
+					"kind": "bin"
+				}
+			},
+			"args": ["poem.txt", "the"],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'minigrep'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=minigrep",
+					"--package=minigrep"
+				],
+				"filter": {
+					"name": "minigrep",
+					"kind": "bin"
+				}
+			},
 			"args": [],
 			"cwd": "${workspaceFolder}"
 		}
