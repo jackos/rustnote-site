@@ -20,6 +20,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
     }
 }
 ```
+## Read from a file the long way
 ```rust
 use std::io;
 use std::io::Read;
@@ -31,4 +32,10 @@ fn read_username_from_file() -> Result<String, io::Error> {
     f.read_to_string(&mut s)?;
     Ok(s)
 }
+```
+## Read from a file the short way
+```rust
+use std::fs::read_to_string;
+let x = fs::read_to_string("hello.txt");
+println!(x)
 ```

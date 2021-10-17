@@ -30,8 +30,9 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let mut results = Vec::new();
+    let query = &query.to_lowercase();
     for line in contents.lines() {
-        if line.to_lowercase().contains(&query.to_lowercase()) {
+        if line.to_lowercase().contains(query) {
             results.push(line);
         }
     }
@@ -53,8 +54,6 @@ impl Config {
         let filename = args[2].clone();
 
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
-        println!("{}", case_sensitive);
-
         Ok(Config {
             query,
             filename,

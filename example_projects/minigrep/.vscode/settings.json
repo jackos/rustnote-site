@@ -1,0 +1,17 @@
+{
+    "saveAndRun": {
+        "commands": [
+            {
+                "cmd": "cd ${fileDirname} && cargo test",
+                "match": "lib.rs",
+                "useShortcut": false,
+                "silent": false,
+            },
+            {
+                "cmd": "cd ${fileDirname} && cargo run the poem.txt",
+                "match": "main.rs$",
+                "isAsync": true
+            }
+        ]
+    },
+}

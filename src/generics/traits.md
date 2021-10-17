@@ -93,3 +93,30 @@ impl Summary for Tweet {
     }
 }
 ```
+
+## Conditionally implement methods
+You can implement a method, only when the type has implemented a trait, the below is an example of a implementing cmp_display() when a the type being used inside `Pair` has implemented `Display` and `PartialOrd`
+```rust
+use std::fmt::Display;
+
+struct Pair<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+        Self { x, y }
+    }
+}
+
+impl<T: Display + PartialOrd> Pair<T> {
+    fn cmp_display(&self) {
+        if self.x >= self.y {
+            println!("The largest member is x = {}", self.x);
+        } else {
+            println!("The largest member is y = {}", self.y);
+        }
+    }
+}
+```

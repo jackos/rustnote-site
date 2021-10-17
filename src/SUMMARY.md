@@ -23,6 +23,9 @@
 	- [Traits](generics/traits.md)
 	- [Lifetimes](generics/lifetimes.md)
 
+- [Functional]()
+	- [Closures](functional/closures.md)
+
 - [Ownership]()
 	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
@@ -44,6 +47,8 @@
 - [std]()
 	- [collections]()
 		- [HashMap](std/collections/hashmap.md)
+	- [fs](std/fs.md)
+	- [env](std/env.md)
 
 - [General]()
 	- [Terms](gerneral/terms.md)
