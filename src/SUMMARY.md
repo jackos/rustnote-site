@@ -33,6 +33,7 @@
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)
+	- [Documentation](toolchain/documentation.md)
 	- [Cargo](toolchain/cargo.md)
 		- [Workspace](toolchain/workspace.md)
 		- [CI](toolchain/ci.md)

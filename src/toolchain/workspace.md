@@ -6,11 +6,11 @@ Cargo.toml
 Cargo.lock
 release/
 adder
-├── Cargo.toml
-├── src/
+	├── Cargo.toml
+	├── src/
 add-one
-├── Cargo.toml
-├── src/
+	├── Cargo.toml
+	├── src/
 ```
 
 ## Top level `Cargo.toml`
