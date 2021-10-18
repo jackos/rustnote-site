@@ -1,4 +1,4 @@
-[#](#.md) Summary
+# Summary
 [Rustnote](rustnote.md)
 
 - [Basics]()
@@ -37,25 +37,22 @@
 		- [Workspace](toolchain/workspace.md)
 		- [CI](toolchain/ci.md)
 
-- [Crates]()
+<!-- - [Crates]()
 	- [rand](crates/rand.md)
 	- [regex](crates/regex.md)
 	- [Bevy](bevy/misc.md)
 	- [xtask](crates/xtask.md)
 
-- [godot](godot/compile.md)
+- [godot](godot/compile.md) -->
 
 - [std]()
-	- [collections]()
-		- [HashMap](std/collections/hashmap.md)
-		- [Vector](types/vectors.md)
+	- [HashMap](std/collections/hashmap.md)
+	- [Vector](types/vectors.md)
 	- [fs](std/fs.md)
 	- [env](std/env.md)
 
 - [General]()
-	- [Terms](gerneral/terms.md)
 	- [Attributes](general/attributes.md)
-	- [Useful Links](general/links.md)
 	- [Project Structure](general/structure.md)
 
 - [Algos]()
