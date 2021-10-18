@@ -16,19 +16,22 @@
 	- [Tuple](types/tuple.md)
 	- [Conversion](types/conversions.md)
 
-- [Generics]()
-	- [Types](generics/types.md)
-	- [Traits](generics/traits.md)
-	- [Lifetimes](generics/lifetimes.md)
-
 - [Functional]()
 	- [Functions](basics/functions.md)
 	- [Closures](functional/closures.md)
 	- [Iterators](functional/iterators.md)
 
+- [Generics]()
+	- [Types](generics/types.md)
+	- [Traits](generics/traits.md)
+	- [Lifetimes](generics/lifetimes.md)
+
 - [Ownership]()
 	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
+
+- [Smart Pointers]()
+	- [Box](smartPointers/box.md)
 
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)

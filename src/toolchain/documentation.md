@@ -1,7 +1,11 @@
 # Documentation
+Cargo's inbuilt documentation tooling is incredibly useful while simple, it's one of the coolest things about the language because it promotes providing examples, which I always find the fastest way to learn a new library.
 
-## Use markdown inside comments
-This assert will be tested with `cargo test` wow! Keeps documentation examples in sync with the library
+### Serve documentation in http
+cargo doc --open
+
+### Use markdown inside comments
+This assert will be tested with `cargo test`. Keeps documentation examples in sync with the library
 ```rust
 /// Adds one to the number given.
 ///
@@ -17,8 +21,9 @@ pub fn add_one(x: i32) -> i32 {
     x + 1
 }
 ```
+The above comment applies tested html documentation to the add_one function built from markdown. So simple, so powerful.
 
-## Containing docstring
+### Containing docstring
 If this docstring is at the root of the crate,
 it will describe the entire crate
 ```rust
