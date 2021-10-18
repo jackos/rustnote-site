@@ -3,12 +3,14 @@
 ## File Structure
 ```
 Cargo.toml
--- add-one
----- src
----- Cargo.toml
--- adder
----- src
----- Cargo.toml
+Cargo.lock
+release/
+adder
+├── Cargo.toml
+├── src/
+add-one
+├── Cargo.toml
+├── src/
 ```
 
 ## Top level `Cargo.toml`
