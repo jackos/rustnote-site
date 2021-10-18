@@ -3,7 +3,6 @@
 
 - [Basics]()
 	- [Variables](basics/variables.md)
-	- [Functions](basics/functions.md)
 	- [Loops](basics/loops.md)
 	- [Modules](basics/modules.md)
 	- [Errors](basics/errors.md)
@@ -16,7 +15,6 @@
 	- [Array](types/array.md)
 	- [Tuple](types/tuple.md)
 	- [Conversion](types/conversions.md)
-	- [Vector](types/vectors.md)
 
 - [Generics]()
 	- [Types](generics/types.md)
@@ -24,6 +22,7 @@
 	- [Lifetimes](generics/lifetimes.md)
 
 - [Functional]()
+	- [Functions](basics/functions.md)
 	- [Closures](functional/closures.md)
 	- [Iterators](functional/iterators.md)
 
@@ -35,6 +34,7 @@
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)
 	- [Cargo](toolchain/cargo.md)
+		- [Workspace](toolchain/workspace.md)
 		- [CI](toolchain/ci.md)
 
 - [Crates]()
@@ -48,6 +48,7 @@
 - [std]()
 	- [collections]()
 		- [HashMap](std/collections/hashmap.md)
+		- [Vector](types/vectors.md)
 	- [fs](std/fs.md)
 	- [env](std/env.md)
 
