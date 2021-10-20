@@ -32,6 +32,8 @@
 
 - [Smart Pointers]()
 	- [Box](smartPointers/box.md)
+	- [Custom](smartPointers/custom.md)
+	- [Pointer Traits](smartPointers/traits.md)
 
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
