@@ -1,3 +1,6 @@
+# Channels
+Sharing data to the main thread from a spawned thread
+```rust
 use std::sync::mpsc;
 use std::thread;
 
@@ -11,8 +14,9 @@ fn main() {
 
     loop {
         match rx.recv() {
-            Ok(message) => println!("Cool: {}", message),
+            Ok(message) => println!("Message from spawned thread: {}", message),
             _ => break,
         }
     }
 }
+```

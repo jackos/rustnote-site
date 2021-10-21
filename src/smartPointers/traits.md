@@ -41,7 +41,7 @@ There is no runtime penalty for this, it is all taken care of at compile time.
 This means that any type can be coerced to the target, except an immutable can not be coerced to a mutable (this would break borrowing rules)
 
 ## Drop
-Just an example to show printing (which you wouldn't do) once all references go out of scope
+Printing once all references go out of scope
 ```rust
 impl Drop for CustomSmartPointer {
     fn drop(&mut self) {
@@ -49,4 +49,6 @@ impl Drop for CustomSmartPointer {
     }
 }
 ```
-Trying to call this directly would result in an error to avoid `double free`. Instead if you need to call it early use `drop()` which is automatica
+Trying to call this directly would result in an `double free` error. Instead if you need to call it early use `drop()`, which is automatically in scope from `std::mem:drop`
+
+

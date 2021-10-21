@@ -164,14 +164,13 @@ let x = Some(3);
 
 // match on x if == Some(3), else do nothing
 match x {
-    Some(3) => println!("three"),
+    Some(num) => println!("number: {}", num),
     _ => (),
 }
 
 // Exact same logic with if let
-if let Some(3) = x {
-    println!("three");
-
+if let Some(num) = x {
+    println!("number: {}", num)
 // Can also throw in an else statement
 } else {
     println!("not three");

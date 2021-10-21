@@ -32,8 +32,3 @@ fn main() {
 ```
 Behind the scenes this is running: `*(y.deref())`
 
-<<<<<<< HEAD
-git commit --amend --author "Jack Clayton <jackos@me.com>" --no-edit && \
-git rebase --continue
-=======
->>>>>>> da38eca (Deref and drop)

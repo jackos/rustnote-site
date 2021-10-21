@@ -30,10 +30,18 @@
 	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
 
-- [Smart Pointers]()
+- [Smart Pointers](smartPointers/index.md)
 	- [Box](smartPointers/box.md)
+	- [Rc](smartPointers/rc.md)
+	- [RefCell](smartPointers/refCell.md)
+	- [Weak](smartPointers/weak.md)
 	- [Custom](smartPointers/custom.md)
 	- [Pointer Traits](smartPointers/traits.md)
+	- [Memory Leaks](smartPointers/leak.md)
+
+- [Concurrency](concurrency/concurrency.md)
+	- [Threads](concurrency/threads.md)
+	- [Channels](concurrency/channels.md)
 
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
