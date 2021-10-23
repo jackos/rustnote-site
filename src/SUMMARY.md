@@ -24,6 +24,7 @@
 - [Generics]()
 	- [Types](generics/types.md)
 	- [Traits](generics/traits.md)
+	- [Trait Objects](generics/traitObjects.md)
 	- [Lifetimes](generics/lifetimes.md)
 
 - [Ownership]()
@@ -42,6 +43,14 @@
 - [Concurrency](concurrency/concurrency.md)
 	- [Threads](concurrency/threads.md)
 	- [Channels](concurrency/channels.md)
+	- [Mutex and Arc](concurrency/mutex.md)
+
+- [General]()
+	- [Attributes](general/attributes.md)
+	- [Project Structure](general/structure.md)
+	- [Object Orientated](general/oop.md)
+	- [Pattern Matching](general/patterns.md)
+	- [Definitions](general/definitions.md)
 
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
@@ -65,9 +74,6 @@
 	- [fs](std/fs.md)
 	- [env](std/env.md)
 
-- [General]()
-	- [Attributes](general/attributes.md)
-	- [Project Structure](general/structure.md)
 
 - [Algos]()
 	- [Two Sum](algo/twosum.md)

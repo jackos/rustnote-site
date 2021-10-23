@@ -9,6 +9,32 @@ while number != 0 {
 }
 ```
 
+## While let
+Same as while but we get a variable back if the assertion matches, so we can access `top` directly below:
+```rust
+fn main() {
+    let mut stack = Vec::new();
+
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    while let Some(top) = stack.pop() {
+        println!("{}", top);
+    }
+}
+```
+
+## For destructure
+Also using an enumerate to get back the index
+```rust
+let v = vec!['a', 'b', 'c'];
+
+for (index, value) in v.iter().enumerate() {
+    println!("{} is at index {}", value, index);
+}
+```
+
 ## For Range
 ```rust
 for number in (1..4).rev() {

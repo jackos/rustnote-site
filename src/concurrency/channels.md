@@ -20,3 +20,9 @@ fn main() {
     }
 }
 ```
+This can be changed to run like an iterator instead
+```rust
+for received in rx {
+	println!("Got: {}", received);
+}
+```

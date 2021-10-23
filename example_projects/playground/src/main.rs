@@ -1,18 +1,34 @@
-use std::sync::mpsc;
-use std::thread;
+use Color::Hsv;
+use Color::Rgb;
+use Message::ChangeColor;
+enum Color {
+    Rgb(i32, i32, i32),
+    Hsv(i32, i32, i32),
+}
 
-fn main() {
-    let (tx, rx) = mpsc::channel();
-    thread::spawn(move || {
-        let val = String::from("hi");
-        tx.send(val).unwrap();
-        tx.send(String::from("cool")).unwrap();
-    });
+enum Message {
+    ChangeColor(Color),
+}
 
-    loop {
-        match rx.recv() {
-            Ok(message) => println!("Cool: {}", message),
-            _ => break,
+impl Message {
+    fn print_me(&self) {
+        match self {
+            ChangeColor(Rgb(r, g, b)) => {
+                println!("Change the color to red {}, green {}, and blue {}", r, g, b)
+            }
+            ChangeColor(Hsv(r, g, b)) => {
+                println!(
+                    "Change the color to hue {}, saturation {}, and value {}",
+                    r, g, b
+                )
+            }
         }
     }
+}
+
+fn main() {
+    let msg = ChangeColor(Rgb(25, 50, 50));
+    msg.print_me();
+    let msg = ChangeColor(Hsv(50, 45, 180));
+    msg.print_me();
 }
