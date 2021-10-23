@@ -194,6 +194,7 @@ match origin {
 ```
 
 ### Match guards
+Adds an extra check to an arm
 ```rust
 let num = Some(4);
 
@@ -201,6 +202,38 @@ match num {
     Some(x) if x < 5 => println!("less than five: {}", x),
     Some(x) => println!("{}", x),
     None => (),
+}
+```
+Check if the value of `x` matches `4 | 5 | 6`, but y being true takes precedence:
+```rust
+let x = 4;
+let y = false;
+
+match x {
+    4 | 5 | 6 if y => println!("yes"),
+    _ => println!("no"),
+}
+```
+
+### Match Binding
+`@` gives access to variable which has been matched
+```rust
+enum Message {
+    Hello { id: i32 },
+}
+
+fn main() {
+    let msg = Message::Hello { id: 5 };
+
+    match msg {
+        Message::Hello {
+            id: id_variable @ 3..=7,
+        } => println!("Found an id in range: {}", id_variable),
+        Message::Hello { id: 10..=12 } => {
+            println!("Found an id in another range")
+        }
+        Message::Hello { id } => println!("Found some other id: {}", id),
+    }
 }
 ```
 

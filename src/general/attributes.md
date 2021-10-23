@@ -16,14 +16,13 @@ Determines what causes two types to be `==` or `-=` to each other, by setting th
 Determines the order when comparing complex data types with `>` `>=` `<` `<=`.The order of structs and enums from top to bottom matches smallest to largest when deriving `PartialOrd`
 
 ### Eq
-Determines when 
+Determines when two objects are equal to each other
 
 ## cfg
 Mark a function as a test so it doesn't produce warnings about unused `use` directives. 
 
-TODO: Probably does more not sure yet.
-#[cfg(test)]
 ```rust
+#[cfg(test)]
 mod tests {
 	#[test]
 	fn it_works() {

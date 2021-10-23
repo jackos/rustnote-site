@@ -52,6 +52,9 @@
 	- [Pattern Matching](general/patterns.md)
 	- [Definitions](general/definitions.md)
 
+- [Advanced]()
+	- [Unsafe](advanced/unsafe.md)
+
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)
