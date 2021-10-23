@@ -15,11 +15,13 @@
 	- [Array](types/array.md)
 	- [Tuple](types/tuple.md)
 	- [Conversion](types/conversions.md)
+	- [Advanced Types](types/advanced.md)
 
 - [Functional]()
 	- [Functions](basics/functions.md)
 	- [Closures](functional/closures.md)
 	- [Iterators](functional/iterators.md)
+	- [Function Pointers](functional/pointers.md)
 
 - [Generics]()
 	- [Types](generics/types.md)

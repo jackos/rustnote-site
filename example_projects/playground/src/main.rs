@@ -1,9 +1,11 @@
-extern "C" {
-    fn abs(input: i32) -> i32;
+#[derive(Debug)]
+enum Status {
+    Value(u32),
+    Stop,
 }
 
 fn main() {
-    unsafe {
-        println!("Absolute value of -3 according to C: {}", abs(-3));
-    }
+    let mut list_of_statuses: Vec<Status> = (0u32..20).map(|i| Status::Value(i)).collect();
+    list_of_statuses.push(Status::Stop);
+    println!("{:?}", list_of_statuses);
 }

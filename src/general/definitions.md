@@ -31,3 +31,12 @@ This means the pattern may not match, it's used only in `if let` and `while let`
 
 ### ABI
 `Application Binary Interface` defines how the functions from another language are called at the assembly level.
+
+### Static Variable
+Global variable with lifetime of `\`static`. Different to const in that they're in a fixed place in memory, consts duplicate their data wherever they're used.
+
+### Thunk
+Code to be evaluated at a later time
+
+### DSTs
+Dynamically sized types

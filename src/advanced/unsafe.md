@@ -2,7 +2,7 @@
 ## Dereferencing a Raw Pointer
 Immutable raw pointer: `*const T` mutable raw pointer: `*mut T`
 
-### Reasons why unsafe
+### Reasons why raw pointers are unsafe
 - Ignore borrowing rules e.g. multiple mutable pointers to the same location
 - Aren’t guaranteed to point to valid memory
 - Are allowed to be null
@@ -84,3 +84,56 @@ fn main() {
 >
 > Once compiled to library can be linked to from C
 > ```
+
+## Static Variables (globals)
+You can modify global state in unsafe Rust
+```rust
+static mut COUNTER: u32 = 0;
+
+fn add_to_count(inc: u32) {
+    unsafe {
+        COUNTER += inc;
+    }
+}
+
+fn main() {
+    add_to_count(3);
+
+    unsafe {
+        println!("COUNTER: {}", COUNTER);
+    }
+}
+```
+
+## Unsafe Traits
+Must use unsafe keyword to implement an unsafe trait
+```rust
+unsafe trait Foo {
+    // methods go here
+}
+
+unsafe impl Foo for i32 {
+    // method implementations go here
+}
+
+fn main() {}
+```
+
+## Unions
+To access fields in a union is unsafe, as there is no guarantee what type it will be. Unions are generally only used for interacting with C code, they're like enums without the safety guarantees.
+```rust
+#[repr(C)]
+union MyUnion {
+    f1: u32,
+    f2: f32,
+}
+
+fn main() {
+    let mut u = MyUnion { f2: 1.5 };
+    unsafe {
+        let f = u.f2;
+        println!("proper: {} wrong: {}", u.f2, u.f1);
+        u.f1 = 10;
+        println!("proper: {} wrong: {}", u.f1, u.f2);
+    }
+}
