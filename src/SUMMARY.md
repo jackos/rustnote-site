@@ -54,9 +54,10 @@
 	- [Pattern Matching](general/patterns.md)
 	- [Definitions](general/definitions.md)
 
+- [Macros](macros/macros.md)
+
 - [Advanced]()
 	- [Unsafe](advanced/unsafe.md)
-
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)

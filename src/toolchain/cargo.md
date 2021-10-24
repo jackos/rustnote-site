@@ -139,3 +139,8 @@ And run commands:
 cargo login [api_key]
 cargo publish
 ```
+
+## Add a feature from a crate
+```toml
+syn = { version = "1.0", features = ["extra-traits"] }
+```
