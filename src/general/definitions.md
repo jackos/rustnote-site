@@ -40,3 +40,29 @@ Code to be evaluated at a later time
 
 ### DSTs
 Dynamically sized types
+
+## General
+
+### URI
+Uniform Resource `Identifier` 
+- /
+- data:,Hello%20World
+- /data/banks
+- https://mysite.com/data/banks
+
+A `URI` can be a `URL`, a `URN` or both, but doesn't have to be
+
+#### URL
+Uniform Resource `Locator`
+- http://mysite.com
+- https://mysite.com/data/banks
+- ftp://myfileserver.com
+
+#### URN
+Uniform Resource `Name`
+A URI that is unique across space and time e.g.
+- urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+- urn:publishing:book
+
+### CR LF
+`Carriage Return, Line Feed` - what DOS used when some devices needed a carriage return and some needed a line feed. Windows newlines still use `\r\n` while linux uses `\n`

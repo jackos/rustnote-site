@@ -1,50 +1,9 @@
-# Macros
-## Declarative Macros
-	- `Macros by example`
-	- `macro_rules!`
-	- `macros`
-
-### Simplified `vec`
-```rust
-// indicates macro is in scope if crate is in scope
-#[macro_export]
-macro_rules! vec2 {
-    // $()     = pattern to match
-    // $x:expr = match any expression and name it $x
-    // ,*      = one or more matches
-    ( $( $x:expr ),* ) => {
-        {
-            let mut temp_vec = Vec::new();
-            $(
-                temp_vec.push($x);
-            )*
-            temp_vec
-        }
-    };
-}
-
-fn main() {
-    let v: Vec<u32> = vec2![1, 2, 3];
-    println!("v = {:?}", v);
-}
-```
-the block inside `{$()*}` results in the macro expanding, so it would become:
-```rust
-{
-    let mut temp_vec = Vec::new();
-    temp_vec.push(1);
-    temp_vec.push(2);
-    temp_vec.push(3);
-    temp_vec
-}
-```
-
-## Procedural Macros
+# Procedural Macros
 Generates code from attributes.
 
 Code must live in its own special crate type.
 
-### Create a procedural macro
+## Create a procedural macro
 ```rust
 use proc_macro;
 
@@ -53,8 +12,8 @@ pub fn some_name(input: TokenStream) -> TokenStream {
 }
 ```
 
-### Example
-#### hello_macro_derive/Cargo.toml
+## Example
+### hello_macro_derive/Cargo.toml
 ```toml
 [package]
 name = "hello_macro_derive"
@@ -68,7 +27,7 @@ proc-macro = true
 syn = { version = "1.0", features = ["extra-traits"] }
 quote = "1.0"
 ```
-#### hello_macro_derive/lib.rs
+### hello_macro_derive/lib.rs
 ```rust
 extern crate proc_macro;
 
@@ -83,7 +42,6 @@ pub fn hello_macro_derive(input: TokenStream) -> TokenStream {
 }
 
 fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
-    println!("ast = {:?}", &ast);
     let name = &ast.ident;
     let gen = quote! {
     // #name replaces value in println! below, it works with repetition
@@ -97,7 +55,7 @@ fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
     gen.into()
 }
 ```
-#### pancakes/Cargo.toml
+### pancakes/Cargo.toml
 ```toml
 [package]
 name = "pancakes"
@@ -109,7 +67,7 @@ edition = "2021"
 [dependencies]
 hello_macro_derive = { path = "../hello_macro_derive" }
 ```
-#### pancakes/main.rs
+### pancakes/main.rs
 ```rust
 use hello_macro_derive::HelloMacro;
 

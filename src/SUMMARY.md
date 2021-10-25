@@ -53,11 +53,16 @@
 	- [Object Orientated](general/oop.md)
 	- [Pattern Matching](general/patterns.md)
 	- [Definitions](general/definitions.md)
-
-- [Macros](macros/macros.md)
-
-- [Advanced]()
 	- [Unsafe](advanced/unsafe.md)
+
+- [Macros]()
+	- [Declarative](macros/declarative.md)
+	- [Procedural](macros/procedural.md)
+	- [Attribute](macros/attribute.md)
+
+- [Examples]()
+	- [Web Server](examples/webServer.md)
+
 - [Toolchain]()
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)

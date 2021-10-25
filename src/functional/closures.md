@@ -1,16 +1,37 @@
+
 # Closures
 
 ### Function definition compared to closures
-```rust
+
+```rs
 fn  add_one_v1   (x: u32) -> u32 { x + 1 }
 let add_one_v2 = |x: u32| -> u32 { x + 1 };
 let add_one_v3 = |x|             { x + 1 };
 let add_one_v4 = |x|               x + 1  ;
 ```
 
+
+## Test adding a header here
+
+
+```rs
+let x = vec![1, 5, 654, 78];
+for item in x {
+	println!("Nice one: {}", item)
+}
+```
+```output
+Nice one: 1
+Nice one: 5
+Nice one: 654
+Nice one: 78
+```
+
+
 ### Capturing value from environment
 This is an example where the value from the surrounding environment is used in the closure.
-```rust
+
+```rs
 fn main() {
     let x = 4;
 
@@ -21,6 +42,7 @@ fn main() {
 }
 ```
 
+
 ### Closure Traits
 These are inferred from closure usage
 - `FnOnce` takes ownership of variable from surrounding environment, means the closure can't be called more than once
@@ -29,7 +51,8 @@ These are inferred from closure usage
 
 ### move
 Use the `move` keyword to ensure we transfer ownership to the closure, if it's a scalar value it will create a new value
-```rust
+
+```rs
 fn main() {
     let x = 4;
 
@@ -40,11 +63,13 @@ fn main() {
 }
 ```
 
+
 ### Closure use example
 Create a cache to hold the result from a closure in a map
 
 This allows to not run the same expensive function more than once for the same value
-```rust
+
+```rs
 use std::collections::HashMap;
 use std::hash::Hash;
 use std::thread;
