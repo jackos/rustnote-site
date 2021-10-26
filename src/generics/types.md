@@ -1,5 +1,7 @@
+
 # Generics
 ## struct method with generics
+
 ```rust
 struct Point<T> {
     x: T,
@@ -17,8 +19,10 @@ impl Point<f32> {
     }
 }
 ```
+
 ## Inference working with mixed types
 P3 knows that its a Point<i32, char>
+
 ```rust
 struct Point<X1, Y1> {
     x: X1,
@@ -45,15 +49,20 @@ fn main() {
 ```
 
 
+
 ## Monomorphization
 This is where generic types are replaced with concrete types at compile time.
 
 e.g. if `Option<T>` is used with an i32 and a f64, 
+
 ```rust
 let integer = Some(5);
 let float = Some(5.0);
+println!("Wow: {} {}", integer, float);
 ```
+
 At compile time the code will expand to:
+
 ```rust
 enum Option_i32 {
     Some(i32),
@@ -70,4 +79,5 @@ fn main() {
     let float = Option_f64::Some(5.0);
 }
 ```
+
 Which removes the runtime penalty, but does cost in compile time.
