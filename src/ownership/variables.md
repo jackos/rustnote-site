@@ -63,39 +63,51 @@ The part where people get confused is that rust automatically dereferences a `va
 Sometimes described as `dependency lines`, they track the lifetimes of values.
 Looking at a simple program:
 ```rust
-let mut x = 42;
+// Create 1st flow
+let mut x = 5;
+//  Continue 1st flow
 let y = &x;
-x = 43;
-println!("{} {}", x, y);
+// Create a 2nd flow
+x = 10;
+// Continues 1st flow, conflicting with 2nd flow
+println!("{}", y);
 ```
 ```output
-Compiling output v0.0.1 (/tmp)
+warning: value assigned to `x` is never read
+ --> src/main.rs:7:1
+  |
+7 | x = 43;
+  | ^
+  |
+  = note: `#[warn(unused_assignments)]` on by default
+  = help: maybe it is overwritten before being read?
+
 error[E0506]: cannot assign to `x` because it is borrowed
- --> main.rs:6:1
+ --> src/main.rs:7:1
   |
 5 | let y = &x;
   |         -- borrow of `x` occurs here
-6 | x = 43;
+6 | // Now there are two mutable flows. No error yet
+7 | x = 43;
   | ^^^^^^ assignment to borrowed `x` occurs here
-7 | println!("{} {}", x, y);
-  |                      - borrow later used here
+8 | // Th
+9 | println!("{}", y);
+  |                - borrow later used here
 
 For more information about this error, try `rustc --explain E0506`.
-error: could not compile `output` due to previous error
+warning: `output` (bin "output") generated 1 warning
+error: could not compile `output` due to previous error; 1 warning emitted
 ```
-This fails to compile because there are conflicting `flows`.
 
-When `y` is assigned a reference to `x` as its value a new `flow` is created, there are now two parallel flows
+There cannot be exclusive and shared use of a value at the same time. If the print statement was omitted, the compiler would detect that 1st flow wasn't used again, so it would compile:
+
 ```rust
-fn wow_it_works(x: &str) -> String {
-	println!("Data coming in: {}", x);
-	format!("Very cool: {}", x)
-}
-```
-```rust
-let x = wow_it_works("nice one");
-println!("{}", x);
+let mut x = 5;
+// y is never used again
+let y = &x;
+x = 10;
+println!("2nd flow x: {}", x)
 ```
 ```output
-Very cool: nice one
+2nd flow x: 10
 ```
