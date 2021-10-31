@@ -1,20 +1,6 @@
 
 # Project Structure
 
-
-```rust
-let x = vec![1,4,5];
-for item in x {
-	println!("item: {}", item );
-}
-```
-```output
-item: 1
-item: 4
-item: 5
-```
-
-
 ## General Notes
 - `src/main.rs` can't be tested so it should be minimal, move any complicated logic into `src/lib.rs`
 

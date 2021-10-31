@@ -37,7 +37,6 @@ Build crate
 ```bash
 cargo build [--release | --debug]
 ```
-
 ### test
 Run through all test cases defined in ./tests/
 ```bash
@@ -143,4 +142,16 @@ cargo publish
 ## Add a feature from a crate
 ```toml
 syn = { version = "1.0", features = ["extra-traits"] }
+```
+
+## Change the default build target
+Make a new file in the project root at:
+`.cargo/config`
+```toml
+[build]
+target = "wasm32-unknown-unknown"
+```
+This will also update how rust analyzer reacts to
+```
+#[cfg(target_arch = "wasm32")]
 ```

@@ -30,8 +30,9 @@
 	- [Lifetimes](generics/lifetimes.md)
 
 - [Ownership]()
-	- [Stack and Heap](ownership/stack_heap.md)
 	- [General](ownership/general.md)
+	- [Stack and Heap](ownership/stack_heap.md)
+	- [Variables](ownership/variables.md)
 
 - [Smart Pointers](smartPointers/index.md)
 	- [Box](smartPointers/box.md)
@@ -64,6 +65,7 @@
 	- [Web Server](examples/webServer.md)
 
 - [Toolchain]()
+	- [Rustup](toolchain/rustup.md)
 	- [Testing](toolchain/testing.md)
 	- [Debug](toolchain/debug.md)
 	- [Documentation](toolchain/documentation.md)
@@ -71,13 +73,15 @@
 		- [Workspace](toolchain/workspace.md)
 		- [CI](toolchain/ci.md)
 
-<!-- - [Crates]()
-	- [rand](crates/rand.md)
+- [Crates]() 
+	- [egui](crates/egui/egui.md)
+		- [eframe](crates/egui/eframe.md)
+	<!-- - [rand](crates/rand.md)
 	- [regex](crates/regex.md)
 	- [Bevy](bevy/misc.md)
-	- [xtask](crates/xtask.md)
+	- [xtask](crates/xtask.md) -->
 
-- [godot](godot/compile.md) -->
+<!-- - [godot](godot/compile.md) -->
 
 - [std]()
 	- [HashMap](std/collections/hashmap.md)
