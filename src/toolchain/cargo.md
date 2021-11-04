@@ -30,21 +30,18 @@ rand = { git = "https://github.com/rust-lang-nursery/rand.git", rev="9f35b8e"}
 defaults to `$HOME/.cargo/` but can be altered with the environment variable `CARGO_HOME`. `crates.io/crates/home` will allow you to access the directory from rust code.
 
 ### Files
-```text
-config.toml:      global config.
-credentials.toml: stores `cargo login` information
-.crates.toml:     information about installed crates
-.crates2.json:    information about installed crates in JSON
-```
+`config.toml` global config.
+`credentials.toml` stores `cargo login` information
+`crates.toml` information about installed crates
+`crates2.json` information about installed crates in JSON
 
 ### Directories
-```text
-bin:            executables installed via `cargo install`
-git/db:         bare repo from crate dependencies (.git folder)
-git/checkouts:  source code for each commit being used checked out to this folder
-registry/index: bare .git repo with metadata
-registry/cache: downloaded dependencies, gzip files with .crate extension
-registry/src:   contains source code from the dependencies
+`bin` executables installed via `cargo install`
+`git/db` bare repo from crate dependencies (.git folder)
+`git/checkouts` source code for each commit being used checked out to this folder
+`registry/index` bare .git repo with metadata
+`registry/cache` downloaded dependencies, gzip files with .crate extension
+`registry/src` contains source code from the dependencies
 ```
 
 ### Required cache folders for CI
