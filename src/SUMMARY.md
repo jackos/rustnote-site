@@ -77,6 +77,8 @@
 	- [egui](crates/egui/egui.md)
 		- [eframe](crates/egui/eframe.md)
 	- [actix](crates/actix/actix.md)
+		-[Api Test](crates/actix/apiTest.md)
+	- [sqlx](crates/sqlx.md)
 	<!-- - [rand](crates/rand.md)
 
 	- [regex](crates/regex.md)

@@ -28,4 +28,29 @@ Listener for requests, maximum number of connections, TLS etc. All transport lev
 Where all the application logic lives, routing middleware, request handlers etc.
 
 
+## Main entry point to lib for easy testing
+src/main.rs
+```rust
+use std::net::TcpListener;
 
+use zero2prod::run;
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind host");
+    run(listener)?.await
+}
+```
+
+### lib.rs
+src/lib.rs
+```rust
+pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
+    let server = HttpServer::new(|| {
+        App::new()
+            .route("/health_check", web::get().to(health_check))
+    })
+    .listen(listener)?
+    .run();
+    Ok(server)
+}

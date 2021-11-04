@@ -5,31 +5,20 @@
 cargo test
 ```
 ### Code Coverage
-```
-cargo install cargo-tarpaulin
-cargo tarpaulin --ignore-tests
-```
+`cargo install cargo-tarpaulin`
+`cargo tarpaulin --ignore-tests`
+
 ### Linting
-```bash
-cargo clippy
-```
-fail linter check on warnings
-```bash
-cargo clippy -- -D warnings
-```
-Ignore clippy on line
-```rust
-#[allow(clippy::lint_name)]
-```
+- `cargo clippy` 
+- `cargo clippy -- -D warnings` fail linter check on warnings
+- `#[allow(clippy::lint_name)]` Ignore clippy on line
+
 ### Formatting
-```bash
-cargo fmt -- --check
-```
+`cargo fmt -- --check`
+
 ### Security Vulnerabilities
-```bash
-cargo install cargo-audit
-cargo audit
-```
+`cargo audit`
+
 ### Additional Checks
-`cargo-deny` identifies unmaintained crates, rejects unwanted licenses, spots reuse of crates with different version
+`cargo deny` identifies unmaintained crates, rejects unwanted licenses, spots reuse of crates with different version
 

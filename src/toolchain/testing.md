@@ -89,3 +89,7 @@ mod tests {
     }
 }
 ```
+
+## Visibility
+`tests folder` and `documentation tests` are compiled in separate binaries that have the same visibility as an external user of a library. To test private objects you must use `embedded tests`.
+
