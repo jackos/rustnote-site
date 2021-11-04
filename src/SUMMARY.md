@@ -79,6 +79,7 @@
 	- [actix](crates/actix/actix.md)
 		-[Api Test](crates/actix/apiTest.md)
 	- [sqlx](crates/sqlx.md)
+	- [config](crates/config.md)
 	<!-- - [rand](crates/rand.md)
 
 	- [regex](crates/regex.md)

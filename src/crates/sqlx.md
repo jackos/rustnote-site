@@ -22,3 +22,21 @@ features = [
 - `chrono` allows `timestamptz` to be mapped to `DateTime<T>`
 - `migrate` manage migrations from rust code
 
+## Environment variables
+- `DATABASE_URL` `postgres://postgres:password@localhost:5432/newsletter`
+
+## Command examples
+- `sqlx database create` create the database in the connection string
+- `sqlx migrate add create_subscriptions_table`:
+sqlx migrate add will create a sql file placeholder in `migrations` folder, add your script there:
+```sql
+-- Add migration script here
+CREATE TABLE subscriptions(
+	id uuid NOT NULL,
+	PRIMARY KEY (id),
+	email TEXT NOT NULL UNIQUE,
+	name TEXT NOT NULL,
+	subscribed_at timestamptz NOT NULL
+);
+```
+- `sqlx migrate run` run all the migrations in `migrations` folder
