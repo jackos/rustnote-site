@@ -31,7 +31,7 @@
 
 - [Ownership]()
 	- [General](ownership/general.md)
-	- [Stack and Heap](ownership/stack_heap.md)
+	- [Stack and Heap](ownership/stackHeap.md)
 	- [Variables](ownership/variables.md)
 
 - [Smart Pointers](smartPointers/index.md)
@@ -76,7 +76,9 @@
 - [Crates]() 
 	- [egui](crates/egui/egui.md)
 		- [eframe](crates/egui/eframe.md)
+	- [actix](crates/actix/actix.md)
 	<!-- - [rand](crates/rand.md)
+
 	- [regex](crates/regex.md)
 	- [Bevy](bevy/misc.md)
 	- [xtask](crates/xtask.md) -->

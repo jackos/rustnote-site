@@ -129,3 +129,9 @@ let c3 = &mut s;
 println!("And also after read: {}", c3)
 ```
 
+## Order of dropping
+1) Variables and arguments are dropped in reverse order `why` later value may reference earlier one
+2) Nested values are dropped in source code order `why` More intuitive
+
+## Other notes
+Mut refs can be used like an owner, except the owner is responsible for dropping value, and so you can't move the value it's referencing unless you leave another value in its place.

@@ -1,6 +1,6 @@
 [CI](./ci.md)
 
-## Package Layout
+## Common Package Layout
 
 ```text
 ├── Cargo.lock
@@ -32,43 +32,19 @@
 ```
 
 ## Commands
-### build
-Build crate
-```bash
-cargo build [--release | --debug]
-```
-### test
-Run through all test cases defined in ./tests/
-```bash
-cargo test
-```
+- `cargo build [--release | --debug]`
+- `cargo test` Run through all test cases 
+- `cargo test foo` Run through a single test case
+- `cargo doc --open` Create documentation and serve locally
+- `cargo run` Compiles debug build and runs it
+- `cargo clean` Removes target directories
+- `cargo update` Update all dependencies
+- `cargo update -p rand` Update a single crate
 
-Run through a single test case
-```bash
-cargo test foo
-```
-
-### doc
-Create documentation and serve locally
-```bash
-cargo doc --open
-```
-
-### run
-
-### clean
-
-
-### update
-Update all crates
-```bash
-cargo update
-```
-
-Update a single crate
-```bash
-cargo update -p rand
-```
+## External commands
+Install these external commands annotating the command name with `cargo-` e.g. `cargo install cargo-watch`
+- `cargo watch -x "check"` Run a cargo command every time some code changes
+- `cargo expand` Generate the output of macro code generation
 
 ## Git dependency
 ```toml

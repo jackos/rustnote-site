@@ -98,7 +98,6 @@ For more information about this error, try `rustc --explain E0506`.
 warning: `output` (bin "output") generated 1 warning
 error: could not compile `output` due to previous error; 1 warning emitted
 ```
-
 There cannot be exclusive and shared use of a value at the same time. If the print statement was omitted, the compiler would detect that 1st flow wasn't used again, so it would compile:
 
 ```rust
@@ -110,4 +109,14 @@ println!("2nd flow x: {}", x)
 ```
 ```output
 2nd flow x: 10
+```
+
+```rust
+let mut x = 42;
+let y = &mut x;
+*y = 10;
+println!("{}", y)
+```
+```output
+10
 ```

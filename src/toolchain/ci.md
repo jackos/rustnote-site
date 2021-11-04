@@ -1,70 +1,35 @@
-## Continuous Integration
-### Travis CI
-Travis CI sample .travis.yml
-
-```yml
-language: rust
-rust:
-  - stable
-  - beta
-  - nightly
-matrix:
-  allow_failures:
-    - rust: nightly
-This will test all three release channels, but any breakage in nightly will not fail your overall build. Please see the Travis CI Rust documentation for more information.
+# Continuous Integration
+## CI Steps for rust
+### Tests
 ```
-
-### GitLab CI
-GitLab CI sample .gitlab-ci.yml
-```yml
-stages:
-  - build
-
-rust-latest:
-  stage: build
-  image: rust:latest
-  script:
-    - cargo build --verbose
-    - cargo test --verbose
-
-rust-nightly:
-  stage: build
-  image: rustlang/rust:nightly
-  script:
-    - cargo build --verbose
-    - cargo test --verbose
-  allow_failure: true
+cargo test
 ```
-
-This will test on the stable channel and nightly channel, but any breakage in nightly will not fail your overall build. Please see the GitLab CI documentation for more information.
-
-### builds.sr.ht
-here is a sample .build.yml file. Be sure to change <your repo> and <your project> to the repo to clone and the directory where it was cloned.
-
-```ht
-image: archlinux
-packages:
-  - rustup
-sources:
-  - <your repo>
-tasks:
-  - setup: |
-      rustup toolchain install nightly stable
-      cd <your project>/
-      rustup run stable cargo fetch
-  - stable: |
-      rustup default stable
-      cd <your project>/
-      cargo build --verbose
-      cargo test --verbose
-  - nightly: |
-      rustup default nightly
-      cd <your project>/
-      cargo build --verbose ||:
-      cargo test --verbose  ||:
-  - docs: |
-      cd <your project>/
-      rustup run stable cargo doc --no-deps
-      rustup run nightly cargo doc --no-deps ||:
+### Code Coverage
 ```
-This will test and build documentation on the stable channel and nightly channel, but any breakage in nightly will not fail your overall build. Please see the builds.sr.ht documentation for more information.
+cargo install cargo-tarpaulin
+cargo tarpaulin --ignore-tests
+```
+### Linting
+```bash
+cargo clippy
+```
+fail linter check on warnings
+```bash
+cargo clippy -- -D warnings
+```
+Ignore clippy on line
+```rust
+#[allow(clippy::lint_name)]
+```
+### Formatting
+```bash
+cargo fmt -- --check
+```
+### Security Vulnerabilities
+```bash
+cargo install cargo-audit
+cargo audit
+```
+### Additional Checks
+`cargo-deny` identifies unmaintained crates, rejects unwanted licenses, spots reuse of crates with different version
+

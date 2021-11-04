@@ -9,3 +9,7 @@ Script: `curl https://sh.rustup.rs -sSf | sh`
 ## Install compiler and cargo
 rustup toolchain install stable
 
+## Install nightly
+rustup toolchain install nightly --allow-downgrade
+
+
