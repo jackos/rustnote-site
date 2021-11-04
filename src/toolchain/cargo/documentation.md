@@ -1,5 +1,5 @@
 # Documentation
-Cargo's inbuilt documentation tooling is incredibly useful while simple, it's one of the coolest things about the language because it promotes providing examples, which I always find the fastest way to learn a new library.
+Cargo has inbuilt documentation tooling, also allowing tests inside the documentation so that it never becomes out of sync with the code base
 
 ### Serve documentation in http
 cargo doc --open

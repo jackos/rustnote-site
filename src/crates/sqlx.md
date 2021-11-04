@@ -3,6 +3,7 @@
 cargo install --version=0.5.7 sqlx-cli --no-default-features --features postgres
 
 ## Cargo.toml example for Postgres
+```toml
 [dependencies.sqlx]
 version = "0.5.7"
 default-features = false
@@ -14,6 +15,7 @@ features = [
 	"chrono",
 	"migrate",
 ]
+```
 
 - `runtime-actix-rustls` use `actix` as runtime and `rustls` as `TLS` backend
 - `macros` gives access to `sqlx::query` and `sqlx::query_as!`

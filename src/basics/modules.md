@@ -1,9 +1,84 @@
 # Modules
 
+## Cargo dependencies
+Anything that's a dependency in `Cargo.toml` will be directly accessible by using the name of the crate, without the need of a `use` keyword:
+
+```toml
+[dependencies]
+rand = "0.7.0"
+```
+```rust
+let random_boolean = rand::random();
+```
+
+## Include module from another file
+If there is a `math.rs` file exposing a single function:
+
+```rust
+pub fn add(x: i32, y: i32) -> i32 {
+    x + y
+}
+```
+You can access from `main.rs` in the same folder:
+```rust
+mod math {
+    include!("math.rs");
+}
+let result = math::add(1, 2);
+```
+There is a shorthand available that is used as convention:
+```rust
+mod math
+let result = math::add(1, 2);
+```
+
+## `use` keyword
+The only purpose of `use` is to bring symbols into scope, making things shorter.
+```rust
+use math::add;
+let result = add(1, 2)
+```
+
+## `mod.rs`
+A `mod.rs` file is a special file, the folder that it's in is considered the root and it can then expose paths from other files e.g.
+```text
+- main.rs
+- math/
+    mod.rs
+    add.rs
+```
+### src/math/mod.rs:
+```
+mod add;
+
+pub use add::add;
+```
+### src/math/add.rs:
+```rust
+pub fn add(x: i32, y: i32) -> i32 {
+    x + y
+}
+```
+
+## lib.rs
+Putting public code inside a `lib.rs` file will be the entry point for the binary code inside `main.rs`:
+
+### src/lib.rs
+```
+
+```
+
+### src/main.rs
+```
+use libtest::math::add;
+```
+
+
 ## Absolute and relative paths
 
-- `crate::` = root of current crate
-- `super::` = from parent module, where root of crate is also considered a module
+- `crate::` - `/` = root of current crate
+- `super::` - `../` = from parent module, where root of crate is also considered a module
+- `self::` - `./` = from self, so things like `pub use self::{add::*}` can be used in `mod.rs`
 
 ```rust
 pub mod front_of_house {
@@ -68,7 +143,7 @@ pub fn eat_at_restaurant() {
 ```
 
 ## Use
-Idiomatic to only bring in the parents of functions, so it's clear where they come from from
+Idiomatic to only bring in the parents of functions, so it's clear where they come from
 ```rust
 mod front_of_house {
     pub mod hosting {
@@ -200,3 +275,5 @@ pub use front_of_house::add_to_waitlist;
 pub fn eat_at_restaurant() {
     add_to_waitlist();
 }
+```
+Note that `prelude` is used as a convention for glob imports, basically denoting that these are all useful modules that can safely be imported together.
