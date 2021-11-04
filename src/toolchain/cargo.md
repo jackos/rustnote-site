@@ -44,12 +44,10 @@ defaults to `$HOME/.cargo/` but can be altered with the environment variable `CA
 - `registry/src` contains source code from the dependencies
 
 ### Required cache folders for CI
-```text
-bin/
-registry/index/
-registry/cache/
-git/db/
-```
+- `bin/`
+- `registry/index/`
+- `registry/cache/`
+- `git/db/`
 
 ### Make smaller binary
 ```toml
