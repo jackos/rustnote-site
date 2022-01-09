@@ -55,6 +55,7 @@
 	- [Pattern Matching](general/patterns.md)
 	- [Definitions](general/definitions.md)
 	- [Unsafe](advanced/unsafe.md)
+	- [Compiler Speedup](general/compiler.md)
 
 - [Macros]()
 	- [Declarative](macros/declarative.md)
@@ -102,3 +103,4 @@
 - [Algos]()
 	- [Two Sum](algo/twosum.md)
 	- [Longest Substring](algo/longest_substring.md)
+

@@ -114,3 +114,21 @@ let config = Config::new(&args).unwrap_or_else(|err| {
         process::exit(1);
     });
 ```
+
+### Group errors together
+So you can return a single error type and then check what specific error it was at the caller via `match` or `if let`
+```rust
+enum ParsePosNonzeroError {
+    Creation(CreationError),
+    ParseInt(ParseIntError),
+}
+
+impl ParsePosNonzeroError {
+    fn from_creation(err: CreationError) -> ParsePosNonzeroError {
+        ParsePosNonzeroError::Creation(err)
+    }
+    fn from_parse_int(err: ParseIntError) -> ParsePosNonzeroError {
+        ParsePosNonzeroError::ParseInt(err)
+    }
+}
+```
