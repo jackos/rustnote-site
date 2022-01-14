@@ -1,10 +1,12 @@
-# Format Strings in Rust 1.58
+# Format Strings in Rust 1.58 
 
-The Rust 1.58 update today bought a very nice addition, something which was touted for `edition 2021`, this is a feature that's often missed by the growing number of dynamic language users that are giving Rust a try, and it's now available in stable!
+### 14th Jan 2022
+
+The `Rust 1.58.0` update today bought a very nice addition, this is a feature that's often missed by the growing number of dynamic language users that are giving Rust a try, and it's now available in stable!
 
 It allows you to put variables from the outside scope directly into format string curly braces:
 
-```rust
+```rust,noplayground
 // In all examples below x = "world"
 let x = "world";
 println!("Hello {x}!");
@@ -16,7 +18,7 @@ You can also use format specifiers within the curly braces.
 
 For example with debug output:
 
-```rust
+```rust,noplayground
 let items = vec![10, 20, 30];
 println!("{items:?}")
 ```
@@ -25,7 +27,7 @@ println!("{items:?}")
 ```
 Or pretty print the output:
 
-```rust
+```rust,noplayground
 println!("{items:#?}")
 ```
 ```output
@@ -37,7 +39,7 @@ println!("{items:#?}")
 ```
 If you haven't seen it before, you can set the minimum width of how items are printed to give uniform spacing with `:[width]`. Example to print a table with even spacing: 
 
-```rust
+```rust,noplayground
 let items = ["these", "words", "are", "different", "sizes"];
 let column1 = "item";
 let column2 = "iter";
@@ -58,7 +60,7 @@ sizes     : 4
 ```
 Align items to the centre:
 
-```rust
+```rust,noplayground
 println!("----------------");
 for (i, item) in items.iter().enumerate() {
 	println!("{item:^10}: {i}");
@@ -74,7 +76,7 @@ different : 3
 ```
 Align items to right
 
-```rust
+```rust,noplayground
 println!("----------------");
 for (i, item) in items.iter().enumerate() {
 	println!("{item:>10}: {i}");
@@ -90,7 +92,7 @@ for (i, item) in items.iter().enumerate() {
 ```
 Set width 7 characters wide leaving 2 spaces after `world`:
 
-```rust
+```rust,noplayground
 println!("hello {x:7}!");
 ```
 ```output
@@ -98,7 +100,7 @@ hello world  !
 ```
 Use an existing i32 variable to do the same thing, just put a `$` after the variable name
 
-```rust
+```rust,noplayground
 let spaces = 7;
 println!("hello {x:spaces$}!");
 ```
@@ -107,7 +109,7 @@ hello world  !
 ```
 Fill in gaps with any character:
 
-```rust
+```rust,noplayground
 println!("right aligned: hello{x:->7}!");
 println!("left aligned: hello{x:-<7}!");
 println!("center aligned: hello{x:-^7}!");
@@ -119,7 +121,7 @@ center aligned: hello-world-!
 ```
 Always print the sign of a numeric type even if positive:
 
-```rust
+```rust,noplayground
 let y = 10;
 println!("{y:+}");
 ```
@@ -128,7 +130,7 @@ println!("{y:+}");
 ```
 Print to hex, binary or octave:
 
-```rust
+```rust,noplayground
 println!("hex: {y:#x}");
 println!("binary: {y:#b}");
 println!("octave {y:#o}");
@@ -136,11 +138,11 @@ println!("octave {y:#o}");
 ```output
 hex: 0xa
 binary: 0b1010
-octave 0o12
+octal: 0o12
 ```
 Set float precision (it rounds to the set precision)
 
-```rust
+```rust,noplayground
 let z = 5.123456;
 println!("3 precision: {z:.3}");
 println!("5 precision: {z:.5}");
@@ -151,7 +153,7 @@ println!("5 precision: {z:.5}");
 ```
 You can use an existing variable to set the precision:
 
-```rust
+```rust,noplayground
 let precision = 3;
 println!("3 precision: {z:.precision$}");
 ```
@@ -160,7 +162,8 @@ println!("3 precision: {z:.precision$}");
 ```
 Chain different format specifiers together
 
-```rust
+(you can edit this cell and run it to experiment)
+```rust,editable
 let f = 255.555555;
 let dec = 2;
 let width = 10;
@@ -173,7 +176,7 @@ Remember that Rust doesn't use any localization, so these outputs will always lo
 
 Also to escape these curly braces, just put two of them in front of eachother
 
-```rust
+```rust,noplayground
 println!("Sometimes I need to print {{ or }} too!")
 ```
 ```output
