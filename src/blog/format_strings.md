@@ -183,4 +183,4 @@ This quality of life improvement is significant, the first thing a programmer do
 
 Thanks for reading, if you have suggestions for things to add you can make pull requests on this file: 
 
-[Github link](https://github.com/jackos/rustnote-site/blob/master/src/blog/format-strings.md)
+[Github link](https://github.com/jackos/rustnote-site/blob/master/src/blog/format_strings.md)
