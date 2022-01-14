@@ -168,7 +168,7 @@ fn main() {
   let f = 255.555555;
   let dec = 2;
   let width = 10;
-  println!("f to 2 decimal places is {f:-^width$.dec$} very cool!");
+  println!("{f} to {dec} decimal places is {f:-^width$.dec$} very cool!");
 }
 ```
 Remember that Rust doesn't use any localization, so these outputs will always look the same.
