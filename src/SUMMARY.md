@@ -1,6 +1,8 @@
 # Summary
 [Rustnote](rustnote.md)
 
+- [Blog]()
+	- [Format Strings in 1.58](blog/format_strings.md)
 - [Basics]()
 	- [Variables](basics/variables.md)
 	- [Loops](basics/loops.md)
