@@ -164,13 +164,12 @@ Chain different format specifiers together
 
 (you can edit this cell and run it to experiment)
 ```rust,editable
-let f = 255.555555;
-let dec = 2;
-let width = 10;
-println!("f to 2 decimal places is {f:-^width$.dec$} very cool!");
-```
-```output
-f to 2 decimal places is --255.56-- very cool!
+fn main() {
+  let f = 255.555555;
+  let dec = 2;
+  let width = 10;
+  println!("f to 2 decimal places is {f:-^width$.dec$} very cool!");
+}
 ```
 Remember that Rust doesn't use any localization, so these outputs will always look the same.
 
