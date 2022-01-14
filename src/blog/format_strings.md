@@ -128,12 +128,12 @@ println!("{y:+}");
 ```output
 +10
 ```
-Print to hex, binary or octave:
+Print to hex, binary or octal:
 
 ```rust,noplayground
 println!("hex: {y:#x}");
 println!("binary: {y:#b}");
-println!("octave {y:#o}");
+println!("octal {y:#o}");
 ```
 ```output
 hex: 0xa
