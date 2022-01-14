@@ -2,6 +2,10 @@
 
 ### 14th Jan 2022
 
+[Rust 1.58.0 Release Notes](https://blog.rust-lang.org/2022/01/13/Rust-1.58.0.html#captured-identifiers-in-format-strings)
+
+[std::fmt Documentation](https://doc.rust-lang.org/std/fmt/)
+
 The `Rust 1.58.0` update today bought a very nice addition, this is a feature that's often missed by the growing number of dynamic language users that are giving Rust a try, and it's now available in stable!
 
 It allows you to put variables from the outside scope directly into format string curly braces:
