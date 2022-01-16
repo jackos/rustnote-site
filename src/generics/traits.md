@@ -8,6 +8,7 @@ pub trait Summary {
         String::from("(Read more...)")
     }
 }
+
 pub struct NewsArticle {
     pub headline: String,
     pub location: String,
@@ -52,7 +53,7 @@ pub fn notify<T: Summary + Display>(item: &T) {
 ```
 ### Where clause
 Implementing multiple interfaces across multiple arguments can become long
-```rust 
+```rust
 fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 ```
 There is alternate syntax to make this clearer
@@ -355,5 +356,51 @@ impl Deref for Wrapper {
     fn deref(&self) -> &Self::Target {
         &self.0
     }
+}
+```
+
+
+## Default Trait
+This allows you to to set default's that offers some extra functionality:
+
+```rust
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: i32,
+}
+// We implement the Default trait to use it as a fallback
+// when the provided string is not convertible into a Person object
+impl Default for Person {
+    fn default() -> Person {
+        Person {
+            name: String::from("John"),
+            age: 30,
+        }
+    }
+}
+```
+
+You can then fill in all the rest of the options with defaults:
+
+```rust
+let john = Person {
+	age: 21,
+	..Default::default()
+};
+println!("{john:?}")
+```
+```output
+Person { name: "John", age: 21 }
+```
+
+## AsRef
+Allows functions to take generic types that implement certain traits
+
+e.g. `str` and `String` both implement `AsRef<str>`, so they can both be used this function where we know that they'll have access to `.as_bytes()`
+
+```rust
+fn byte_counter<T: AsRef<str>>(arg: T) -> usize {
+    arg.as_ref().as_bytes().len()
 }
 ```

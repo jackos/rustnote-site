@@ -14,7 +14,7 @@ fn main() {
 }
 ```
 This is what `String` Deref looks like:
-```
+```rust
 #[stable(feature = "rust1", since = "1.0.0")]
 impl ops::Deref for String {
     type Target = str;

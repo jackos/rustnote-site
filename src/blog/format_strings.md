@@ -6,7 +6,7 @@
 
 [std::fmt Documentation](https://doc.rust-lang.org/std/fmt/)
 
-The `Rust 1.58.0` update today bought a very nice addition, this is a feature that's often missed by the growing number of dynamic language users that are giving Rust a try, and it's now available in stable!
+The `Rust 1.58.0` update brought a nice feature will be familiar to dynamic language users.
 
 It allows you to put variables from the outside scope directly into format string curly braces:
 
@@ -177,7 +177,7 @@ fn main() {
 ```
 Remember that Rust doesn't use any localization, so these outputs will always look the same.
 
-Also to escape these curly braces, just put two of them in front of eachother
+Also to escape these curly braces, just put two of them in front of eachother:
 
 ```rust,noplayground
 println!("Sometimes I need to print {{ or }} too!")
@@ -185,6 +185,7 @@ println!("Sometimes I need to print {{ or }} too!")
 ```output
 Sometimes I need to print { or } too!
 ```
+
 This quality of life improvement is significant, the first thing a programmer does when learning a new language is print output, this brings Rust on par with the most ergonomic of dynamic languages. Compiled languages can have nice things too!
 
 Thanks for reading, if you have suggestions for things to add you can make pull requests on this file: 

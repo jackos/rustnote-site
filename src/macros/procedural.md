@@ -1,37 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Procedural Macros
 Generates code from attributes.
 
 Code must live in its own special crate type.
 
 ## Create a procedural macro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```rust
 use proc_macro;
 
@@ -39,37 +11,8 @@ use proc_macro;
 pub fn some_name(input: TokenStream) -> TokenStream {
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Example
 ### hello_macro_derive/Cargo.toml
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```toml
 [package]
 name = "hello_macro_derive"
@@ -83,35 +26,7 @@ proc-macro = true
 syn = { version = "1.0", features = ["extra-traits"] }
 quote = "1.0"
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### hello_macro_derive/lib.rs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```rust
 extern crate proc_macro;
 
