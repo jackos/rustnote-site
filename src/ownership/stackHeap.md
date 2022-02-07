@@ -1,3 +1,4 @@
+
 # Stack and Heap
 ## Terms
 `Frame` Allocated at the top of the stack when a function is called, contains all variables within a function and any arguments it takes. Once the function returns, its stack frame is reclaimed. This is directly tied to lifetimes, where you can't reference a value if it's in a frame that has been reclaimed.
@@ -14,7 +15,13 @@ Data must have a known fixed size
 Example
 ```rust
 let x = "I'm on the stack!";
+
+Migrate to Dive
+Api access request
+Check submission from Marvin
+Data De-identification - Loki 
 ```
+
 Immutable fixed size, written directly into the exe
 
 ## Heap
@@ -34,6 +41,7 @@ Example
 ```rust
 let mut s = String::from("I'm on the heap!");
 ```
+
 Mutable can change at runtime so goes onto the heap
 
 ## Memory Layout
@@ -61,7 +69,9 @@ if we do
 ```rust
 let s2 = s1;
 ```
+
 We are copying the stack data, not the heap data. So we get back a pointer to the same heap data.
 
 ## Static Memory
 Resides in the programs binary code, this contains anything declared with `static` and other constant values such as `&str`. This means the value lives for the duration of the program, getting the lifetime of \``static`, anything pointing to one of these values also gets \``static`. 
+

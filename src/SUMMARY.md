@@ -8,6 +8,7 @@
 	- [Loops](basics/loops.md)
 	- [Modules](basics/modules.md)
 	- [Errors](basics/errors.md)
+	- [Pointers](basics/pointers.md)
 
 - [Types]()
 	- [Scalar](types/scalar.md)
