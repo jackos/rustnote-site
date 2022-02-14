@@ -1,3 +1,4 @@
+
 # Summary
 [Rustnote](rustnote.md)
 
@@ -50,6 +51,7 @@
 	- [Threads](concurrency/threads.md)
 	- [Channels](concurrency/channels.md)
 	- [Mutex and Arc](concurrency/mutex.md)
+	- [Examples](concurrency/examples.md)
 
 - [General]()
 	- [Attributes](general/attributes.md)
@@ -102,8 +104,12 @@
 	- [fs](std/fs.md)
 	- [env](std/env.md)
 
+- [Data Structures]()
+	- [Linked List](data_structures/linked_list.md)
+
 
 - [Algos]()
 	- [Two Sum](algo/twosum.md)
 	- [Longest Substring](algo/longest_substring.md)
+
 

@@ -1,3 +1,4 @@
+
 # Channels
 Sharing data to the main thread from a spawned thread
 ```rust
@@ -20,6 +21,11 @@ fn main() {
     }
 }
 ```
+```output
+Message from spawned thread: hi
+Message from spawned thread: cool
+```
+
 This can be changed to run like an iterator instead
 ```rust
 for received in rx {

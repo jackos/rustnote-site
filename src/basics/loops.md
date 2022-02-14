@@ -1,3 +1,4 @@
+
 # Loops
 
 ## While
@@ -7,6 +8,11 @@ while number != 0 {
 	println!("{}!", &number);
 	number -= 1;
 }
+```
+```output
+3!
+2!
+1!
 ```
 
 ## While let
@@ -24,6 +30,11 @@ fn main() {
     }
 }
 ```
+```output
+3
+2
+1
+```
 
 ## For destructure
 Also using an enumerate to get back the index
@@ -34,6 +45,11 @@ for (index, value) in v.iter().enumerate() {
     println!("{} is at index {}", value, index);
 }
 ```
+```output
+a is at index 0
+b is at index 1
+c is at index 2
+```
 
 ## For Range
 ```rust
@@ -41,6 +57,12 @@ for number in (1..4).rev() {
     println!("{}!", number);
 }
 println!("LIFTOFF!!!");
+```
+```output
+3!
+2!
+1!
+LIFTOFF!!!
 ```
 
 ## For iter
@@ -51,6 +73,14 @@ for e in a.iter() {
 		println!("The value is: {}", e);
 }
 ```
+```output
+The value is: 10
+The value is: 20
+The value is: 30
+The value is: 40
+The value is: 50
+```
+
 ## For .len()
 Print just the iterator
 ```rust
@@ -59,6 +89,12 @@ let x = [1, 5, 10, 20];
 for i in 0..x.len() {
     println!("{}", i);
 }
+```
+```output
+0
+1
+2
+3
 ```
 
 ## For iter enumerate over string as bytes
@@ -81,6 +117,9 @@ fn main() {
 		println!("{}", x);
 }
 ```
+```output
+Coolioio
+```
 
 ## Break
 Break can be suffixed with an expression to return the result of the expression.
@@ -95,10 +134,13 @@ let x = loop {
 };
 println!("{}", x);
 ```
+```output
+20
+```
 
 ## Break return
 If the semicolon is removed from the end of the loop, we can return the result from the loop expression.
-```rust 
+```rust
 fn looper() -> i32 {
     let mut counter = 0;
     loop {
@@ -114,4 +156,7 @@ fn main() {
     let x = looper();
     println!("The result is {}!", x);
 }
+```
+```output
+The result is 20!
 ```
